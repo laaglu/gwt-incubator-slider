@@ -1,0 +1,42 @@
+.gwt-HSliderBar-shell {
+  border: 3px solid #C3D9FF;
+  border-right: 3px solid #7AA5D6;
+  border-bottom: 3px solid #7AA5D6;
+  background-color: #E8EEF7;
+  height: 34pt;
+  width: 100%;
+}
+.gwt-HSliderBar-shell .gwt-HSliderBar-line {
+  border: 1px solid black;
+  background-color: white;
+  height: 4px;
+  width: 95%;
+  top: 22pt;
+  overflow: hidden;
+}
+.gwt-HSliderBar-shell .gwt-HSliderBar-knob {
+  top: 14pt;
+  width: 11px;
+  height: 21px;
+  z-index: 1;
+  cursor: pointer;
+}
+.gwt-HSliderBar-shell .gwt-HSliderBar-tick {
+  top: 12pt;
+  width: 1px;
+  height: 8pt;
+  background: black;
+  overflow: hidden;
+}
+.gwt-HSliderBar-shell .gwt-HSliderBar-label {
+  top: 2pt;
+  font-size: 8pt;
+  cursor: default;
+}
+.gwt-HSliderBar-shell-focused {
+  border: 3px solid #7AA5D6;
+}
+.gwt-HSliderBar-shell .gwt-HSliderBar-line-sliding {
+  background-color: #CDE2F7;
+  cursor: pointer;
+}
