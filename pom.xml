@@ -6,7 +6,27 @@
 	<packaging>jar</packaging>
 	<version>0.1</version>
 	<name>gwt-incubator-slider</name>
-	<url>http://maven.apache.org</url>
+	<description>A subset of GWT incubator widgets, limited to sliders, but extended to support both horizontal and vertical sliders</description>
+	<url>http://www.vectomatic.org/gwt-incubator-slider</url>
+	<licenses>
+		<license>
+			<name>Apache2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>laaglu</id>
+			<name>Lukas Laag</name>
+			<email>laaglu@gmail.com</email>
+			<url>http://www.vectomatic.org</url>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>1</timezone>
+		</developer>
+	</developers>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
