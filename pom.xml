@@ -7,7 +7,7 @@
 	<version>0.1</version>
 	<name>gwt-incubator-slider</name>
 	<description>A subset of GWT incubator widgets, limited to sliders, but extended to support both horizontal and vertical sliders</description>
-	<url>http://www.vectomatic.org/gwt-incubator-slider</url>
+	<url>http://www.vectomatic.org/mvn-sites/gwt-incubator-slider</url>
 	<licenses>
 		<license>
 			<name>Apache2.0</name>
