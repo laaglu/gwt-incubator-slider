@@ -1,6 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.vectomatic</groupId>
+		<artifactId>vectomatic-parent</artifactId>
+		<version>0.1</version>
+	</parent>
 	<groupId>com.google</groupId>
 	<artifactId>gwt-incubator-slider</artifactId>
 	<packaging>jar</packaging>
@@ -15,32 +20,19 @@
 		</license>
 	</licenses>
 	<scm>
-		<url>http://code.google.com/p/vectomatic/source/browse/#svn/gwt/gwt-incubator-slider/trunk</url>
-		<connection>scm:svn:http://vectomatic.googlecode.com/svn/gwt/gwt-incubator-slider/trunk</connection>
-		<developerConnection>scm:svn:file:///home/laaglu/svn/laaglu-svn/gwt/gwt-incubator-slider/trunk</developerConnection>
+		<url>scm:git:git@github.com:laaglu/gwt-incubator-slider.git</url>
+		<connection>scm:git:git@github.com:laaglu/gwt-incubator-slider.git</connection>
+		<developerConnection>scm:git:git@github.com:laaglu/gwt-incubator-slider.git</developerConnection>
 	</scm>
-	<developers>
-		<developer>
-			<id>laaglu</id>
-			<name>Lukas Laag</name>
-			<email>laaglu@gmail.com</email>
-			<url>http://www.vectomatic.org</url>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>1</timezone>
-		</developer>
-	</developers>
 	<dependencies>
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
-			<version>2.1.0</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<build>
+		<!-- Add java sources to the jar (necessary for GWT) -->
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/java</directory>
@@ -52,114 +44,10 @@
 				<directory>${basedir}/src/main/resources</directory>
 			</resource>
 		</resources>
-		<plugins>
-			<plugin>
-				<!-- Build using java 1.6. GWT requires at least Java 1.5 -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<!-- Produce a skinny war as only the GWT-generated files are of interest -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<packagingExcludes>WEB-INF/lib/*.jar,WEB-INF/classes/**</packagingExcludes>
-				</configuration>
-			</plugin>
-			<!-- Deploy source code in the repository -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<!-- Deploy javadoc in the repository -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
 	</build>
-	<reporting>
-		<plugins>
-			<plugin>
-				<!-- Lock down to 2.0.1 + no license report because of
-				http://jira.codehaus.org/browse/MPIR-150 -->
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.0.1</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>index</report>
-							<report>dependencies</report>
-							<report>project-team</report>
-							<report>summary</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<configuration>
-					<aggregate>true</aggregate>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jxr-plugin</artifactId>
-				<configuration>
-					<aggregate>true</aggregate>
-				</configuration>
-			</plugin>
-		</plugins>
-	</reporting>
+
 	<distributionManagement>
-		<repository>
-			<id>${deployment.id}</id>
-			<name>maven repository</name>
-			<url>${deployment.root}/mvn</url>
-		</repository>
-		<site>
-			<id>${deployment.id}</id>
-			<name>maven site</name>
-			<url>${deployment.root}/mvn-sites/${project.artifactId}</url>
-		</site>
+		<downloadUrl>http://www.vectomatic.org/utils/gwt-incubator-slider</downloadUrl>
 	</distributionManagement>
-	<profiles>
-		<profile>
-			<id>development</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<deployment.id>local-server</deployment.id>
-				<deployment.root>scp://localhost/var/www/vectomatic</deployment.root>
-			</properties>
-		</profile>
-		<profile>
-			<id>production</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-		</profile>
-	</profiles>
+
 </project>
