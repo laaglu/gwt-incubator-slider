@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.vectomatic</groupId>
 		<artifactId>vectomatic-parent</artifactId>
-		<version>0.2-SNAPSHOT</version>
+		<version>0.2</version>
 	</parent>
 	<groupId>com.google</groupId>
 	<artifactId>gwt-incubator-slider</artifactId>
