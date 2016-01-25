@@ -19,9 +19,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<url>scm:git:git@github.com:laaglu/gwt-incubator-slider.git</url>
-		<connection>scm:git:git@github.com:laaglu/gwt-incubator-slider.git</connection>
-		<developerConnection>scm:git:git@github.com:laaglu/gwt-incubator-slider.git</developerConnection>
+		<url>scm:git:git://git/gwt-incubator-slider.git</url>
+		<connection>scm:git:git://git/gwt-incubator-slider.git</connection>
+		<developerConnection>scm:git:git://git/gwt-incubator-slider.git</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
 	<dependencies>
