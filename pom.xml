@@ -8,7 +8,7 @@
 	<groupId>com.google</groupId>
 	<artifactId>gwt-incubator-slider</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.7-SNAPSHOT</version>
+	<version>0.1.7</version>
 	<name>gwt-incubator-slider</name>
 	<description>A subset of GWT incubator widgets, limited to sliders, but extended to support both horizontal and vertical sliders</description>
 	<url>http://www.vectomatic.org/gwt-incubator-slider</url>
@@ -22,7 +22,7 @@
 		<url>scm:git:git://git/gwt-incubator-slider.git</url>
 		<connection>scm:git:git://git/gwt-incubator-slider.git</connection>
 		<developerConnection>scm:git:git://git/gwt-incubator-slider.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>0.1.7</tag>
   </scm>
 	<dependencies>
 		<dependency>
